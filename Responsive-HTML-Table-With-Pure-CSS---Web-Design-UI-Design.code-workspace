@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "vcard-personal-portfolio-1",
+			"path": "../vcard-personal-portfolio-1"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "vcard-personal-portfolio-1"
+	}
+}

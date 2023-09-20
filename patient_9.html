@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Patient Details</title>
+ <style>
+  body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   background-color: #f5f5f5;
+  }
+
+  header {
+   background-color: #007acc;
+   color: #fff;
+   padding: 20px;
+   text-align: center;
+  }
+
+  h1 {
+   margin: 0;
+  }
+
+  .container {
+   max-width: 800px;
+   margin: 20px auto;
+   padding: 20px;
+   background-color: #fff;
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .patient-info {
+   margin-bottom: 20px;
+  }
+
+  .test-reports {
+   border-collapse: collapse;
+   width: 100%;
+  }
+
+  .test-reports th,
+  .test-reports td {
+   border: 1px solid #ddd;
+   padding: 8px;
+   text-align: left;
+  }
+
+  .test-reports th {
+   background-color: #007acc;
+   color: #fff;
+  }
+
+  .test-reports tr:nth-child(even) {
+   background-color: #f2f2f2;
+  }
+   .tab-button {
+   background-color: rgb(78, 141, 170);
+   /* Red button color */
+   color: white;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+  }
+
+  /* Styling for the button on hover */
+  .tab-button:hover {
+   background-color: rgb(8, 68, 105);
+   /* Darker red color on hover */
+  }
+
+  /* Styling for the button after clicking */
+  .tab-button.active {
+   background-color: rgb(45, 124, 160);
+   /* A different shade of red after clicking */
+  }
+
+  /* Content for the tabs */
+  .tab-content {
+   display: none;
+  }
+
+  /* Display the active tab content */
+  .tab-content.active {
+   display: block;
+  }
+  .profile-photo {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.profile-photo img {
+    max-width: 100%;
+    height: auto;
+}
+.profile-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.profile-details {
+    flex: 1;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+}
+ </style>
+</head>
+
+<body>
+ <header>
+  <h1>Medical Profile</h1>
+ </header>
+
+ <div class="container">
+  <div class="profile-container">
+        <div class="profile-details">
+            <h2>Patient Details</h2>
+            <p><strong>Name:</strong> Alice</p>
+            <p><strong>Age:</strong> 25</p>
+            <p><strong>Gender:</strong> Male</p>
+            <p><strong>Location:</strong> Delhi</p>
+        </div>
+        <div class="profile-photo">
+            <img src="download.jpeg" alt="Patient Photo">
+        </div>
+    </div>
+  <h2 style="text-align: center;">Medical History</h2>
+  <p style="text-align: center;"><button class="tab-button" id="tab1"><a href="medical2.html" class="tdlink">Click Here</a></button></p>
+
+  <h2>Test Reports</h2>
+  <table class="test-reports">
+   <thead>
+    <tr>
+     <th>Date</th>
+     <th>Test Type</th>
+     <th>Result</th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>2023-09-01</td>
+     <td>Blood Pressure</td>
+     <td>120/80 mmHg</td>
+    </tr>
+    <tr>
+     <td>2023-09-05</td>
+     <td>Blood Sugar</td>
+     <td>110 mg/dL</td>
+    </tr>
+    <!-- Add more rows as needed -->
+   </tbody>
+  </table>
+  <h3>
+   <p style="text-align: center;"><button class="tab-button" id="tab1"><a href="trys3.html" class="tdlink">Detail Test Reports</a></button></p>
+  </h3>
+ </div>
+ <script>
+ // JavaScript to handle button tab functionality
+ const buttons = document.querySelectorAll('.tab-button');
+ const contents = document.querySelectorAll('.tab-content');
+
+ buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+   // Remove 'active' class from all buttons and contents
+   buttons.forEach((btn) => btn.classList.remove('active'));
+   contents.forEach((content) => content.classList.remove('active'));
+
+   // Add 'active' class to the clicked button and corresponding content
+   button.classList.add('active');
+   const contentId = button.id.replace('tab', 'content');
+   document.getElementById(contentId).classList.add('active');
+  });
+ });
+
+ // Activate the first tab by default
+ buttons[0].click();
+</script>
+</body>
+
+</html>

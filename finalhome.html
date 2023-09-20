@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Patient Details</title>
+ <style>
+  * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+  }
+
+  #mainHead {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+
+  /* CSS for the colorful background */
+  body {
+
+   margin: 0;
+   padding: 0;
+   font-family: Arial, sans-serif;
+  }
+
+  /* CSS for navigation bar */
+  .navbar {
+   background-color: hsl(209, 67%, 37%);
+   overflow: hidden;
+  }
+
+  .navbar a {
+   float: left;
+   font-size: 22px;
+   color: white;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+   display: flex;
+   transition: all 0.1s linear;
+  }
+
+  .navbar a:hover {
+   font-size: 24px;
+   color: black;
+  }
+
+  /* CSS for the table */
+  .container {
+   margin: auto;
+   padding: 20px;
+   width: 95vw;
+   height: 82vh;
+  }
+
+  table {
+   width: 100%;
+   border-collapse: collapse
+  }
+
+  table,
+  th,
+  td {
+   border: 1.5px solid #ddd;
+  }
+
+  th {
+   font-size: 20px;
+   font-weight: bold;
+  }
+
+  th,
+  td {
+   padding: 12px;
+   text-align: left;
+   font-weight: bold;
+  }
+
+  .tdlink {
+   transition: all 0.1s linear;
+   text-decoration: none;
+  }
+
+  .tdlink:hover {
+   font-size: 18px;
+  }
+
+  .tdlink:visited {
+   font-size: 18px;
+   color: rgb(40, 40, 43);
+  }
+
+  th {
+   background-color: hsl(209, 33%, 48%);
+   color: white;
+  }
+
+  tr:nth-child(even) {
+   background-color: hsl(211, 54%, 87%);
+  }
+
+  footer {
+   position: sticky;
+   text-align: center;
+  }
+
+  ul {
+   list-style-type: none;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+  }
+  .tab-button {
+   background-color: rgb(78, 141, 170);
+   /* Red button color */
+   color: white;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+  }
+
+  /* Styling for the button on hover */
+  .tab-button:hover {
+   background-color: rgb(8, 68, 105);
+   /* Darker red color on hover */
+  }
+
+  /* Styling for the button after clicking */
+  .tab-button.active {
+   background-color: rgb(45, 124, 160);
+   /* A different shade of red after clicking */
+  }
+
+  /* Content for the tabs */
+  .tab-content {
+   display: none;
+  }
+
+  /* Display the active tab content */
+  .tab-content.active {
+   display: block;
+  }
+ </style>
+</head>
+
+<body>
+ <div class="navbar">
+  <ul>
+   <li><img src="medical-logo.jpg" alt="medical-logo" height="80px">
+    <h3 style="color: azure;">HEALERS</h3>
+   </li>
+   <li><a href="#">Home</a></li>
+   <li><a href="inventory2.html">Inventory</a></li>
+   <li><a href="indexAp.html">Appointments</a></li>
+   <li><a href="contactus.html">Contact</a></li>
+  </ul>
+ </div>
+
+ <div class="container">
+  <div id="mainHead">
+   <h1 style="margin: 20px;">Electronic Health Record</h1>
+  </div>
+  <h2 style="margin-bottom: 10px; text-align: center ;">Patient Details</h2>
+  <div>
+   <table>
+    <tr>
+     <th>Patient ID</th>
+     <th>Name</th>
+     
+     <th>Last Visited</th>
+
+     <th>More Details</th>
+
+    </tr>
+    <tr>
+     <td>122451</td>
+     <td>John Doe</td>
+     
+     <td>23/04/2023</td>
+
+     <td><button class="tab-button" id="tab1"><a href="real1.html" class="tdlink">view</a></button>
+</td>
+
+    </tr>
+    <tr>
+     <td>122452</td>
+     <td>Alice</td>
+     
+     <td>12/09/2023</td>
+
+     <td><button class="tab-button" id="tab1"><a href="patient_1.html" class="tdlink">view</a></button></button>
+     </td>
+
+    </tr>
+    <tr>
+     <td>122453</td>
+     <td>Alia</td>
+     
+     <td>1/09/2023</td>
+
+     <td><button class="tab-button" id="tab1"><a href="patient_4.html" class="tdlink">view</a></button>
+</td>
+
+    </tr>
+    <tr>
+     <td>122454</td>
+     <td>Priyam</td>
+     
+     <td>12/12/2022</td>
+     <td><button class="tab-button" id="tab1"><a href="patient5.html" class="tdlink">view</a></button>
+
+
+    </tr>
+    <tr>
+     <td>122455</td>
+     <td>Shivi</td>
+     
+     <td>23/05/2023</td>
+
+     <td><button class="tab-button" id="tab1"><a href="patient6.html" class="tdlink">view</a></button>
+
+    </tr>
+    <tr>
+     <td>122456</td>
+     <td>Aditya</td>
+     
+     <td>30/08/2023</td>
+
+     <td><button class="tab-button" id="tab1"><a href="patient7.html" class="tdlink">view</a></button></td>
+
+    </tr>
+     <tr>
+      <td>122457</td>
+      <td>Aditi</td>
+     
+      <td>18/07/2023</td>
+     
+     <td><button class="tab-button" id="tab1"><a href="patient_8.html" class="tdlink">view</a></button>
+     
+     </tr>
+      <tr>
+       <td>122458</td>
+       <td>Dev</td>
+      
+       <td>30/05/2023</td>
+      
+     <td><button class="tab-button" id="tab1"><a href="patient_9.html" class="tdlink">view</a></button>
+      
+      </tr>
+       <tr>
+        <td>122459</td>
+        <td>Satya</td>
+       
+        <td>16/09/2023</td>
+       
+     <td><button class="tab-button" id="tab1"><a href="patient_10.html" class="tdlink">view</a></button>
+       
+       </tr>
+        <tr>
+         <td>122460</td>
+         <td>Aditya Sharma</td>
+        
+         <td>12/06/2023</td>
+        
+     <td><button class="tab-button" id="tab1"><a href="patient_11.html" class="tdlink">view</a></button>
+        
+        </tr>
+    <!-- Add more rows as needed -->
+   </table>
+  </div>
+ </div>
+ <br>
+ <br>
+ 
+  <!-- <p>&copy; 2023 All Rights Reserved.</p> -->
+ 
+ 
+ <!-- JavaScript can be added here for interactivity if needed -->
+<script>
+ // JavaScript to handle button tab functionality
+ const buttons = document.querySelectorAll('.tab-button');
+ const contents = document.querySelectorAll('.tab-content');
+
+ buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+   // Remove 'active' class from all buttons and contents
+   buttons.forEach((btn) => btn.classList.remove('active'));
+   contents.forEach((content) => content.classList.remove('active'));
+
+   // Add 'active' class to the clicked button and corresponding content
+   button.classList.add('active');
+   const contentId = button.id.replace('tab', 'content');
+   document.getElementById(contentId).classList.add('active');
+  });
+ });
+
+ // Activate the first tab by default
+ buttons[0].click();
+</script>
+
+</body>
+
+</html>

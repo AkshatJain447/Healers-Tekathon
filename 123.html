@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Medical History</title>
+ <!-- Include Bootstrap CSS -->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ <style>
+  body {
+   background-color: skyblue;
+  }
+
+  .container {
+   background-color: white;
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  h1,
+  h2 {
+   text-align: center;
+  }
+
+  .table th {
+   background-color: #3498db;
+   /* Blue header background color */
+   color: white;
+  }
+
+  .table th,
+  .table td {
+   text-align: center;
+  }
+
+  .upload-form {
+   padding: 20px;
+   border: 1px solid #ccc;
+   border-radius: 10px;
+   margin-top: 20px;
+  }
+ </style>
+</head>
+
+<body>
+ <div class="container">
+  <h1>Medical History</h1>
+
+  <!-- Patient Details -->
+  <h2>Patient Details</h2>
+  <table class="table">
+   <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Gender</th>
+    <th>Physician</th>
+    <th>Pharmacy</th>
+   </tr>
+   <tr>
+    <td>John Doe</td>
+    <td>35</td>
+    <td>Male</td>
+    <td>Dr. Smith</td>
+    <td>Pharmacy ABC</td>
+   </tr>
+  </table>
+
+  <!-- Medical History Table -->
+  <h2>Medical History</h2>
+  <table class="table">
+   <thead>
+    <tr>
+     <th>Date</th>
+     <th>Prescription</th>
+     <th>Remedies</th>
+     <th>Organs Affected</th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>2023-09-01</td>
+     <td>Rest and Hydration</td>
+     <td>N/A</td>
+     <td>None</td>
+    </tr>
+    <tr>
+     <td>2023-09-05</td>
+     <td>Antibiotics</td>
+     <td>Amoxicillin</td>
+     <td>Throat</td>
+    </tr>
+    <tr>
+     <td>2023-09-10</td>
+     <td>X-ray and Painkillers</td>
+     <td>Ibuprofen</td>
+     <td>Bones</td>
+    </tr>
+    <!-- Add more rows as needed -->
+   </tbody>
+  </table>
+
+  <!-- Upload Form -->
+  <h2>Upload Medical Details</h2>
+  <div class="upload-form">
+   <form>
+    <div class="form-group">
+     <label for="date">Date:</label>
+     <input type="date" class="form-control" id="date">
+    </div>
+    <div class="form-group">
+     <label for="prescription">Prescription:</label>
+     <input type="text" class="form-control" id="prescription">
+    </div>
+    <div class="form-group">
+     <label for="remedies">Remedies:</label>
+     <input type="text" class="form-control" id="remedies">
+    </div>
+    <div class="form-group">
+     <label for="organs">Organs Affected:</label>
+     <input type="text" class="form-control" id="organs">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+   </form>
+  </div>
+ </div>
+
+ <!-- Include Bootstrap JS and jQuery -->
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
