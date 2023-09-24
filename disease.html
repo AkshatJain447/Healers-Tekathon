@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Diseases</title>
+ <!-- Link to Bootstrap CSS -->
+ <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+ <style>
+  body {
+   background-color: skyblue;
+  }
+
+  .container {
+   background-color: white;
+   padding: 30px;
+   border-radius: 20px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  h1,
+  h2 {
+   text-align: center;
+  }
+
+  table {
+   width: 100%;
+  }
+ </style>
+</head>
+
+<body>
+ <div class="container">
+  <h1>Medical Diagnosis Page</h1>
+  <h2>Patient Information</h2>
+  <table class="table table-bordered">
+   <tbody>
+    <tr><B>
+     <th>Patient Name</th>
+     <td>John Doe</td>
+     <th>Physician</th>
+     <td>Dr. Smith</td>
+     </B>
+    </tr>
+    <tr>
+     <th>Age</th>
+     <td>35</td>
+     <th>Pharmacy</th>
+     <td>ABC Pharmacy</td>
+    </tr>
+    <tr>
+     <th>Gender</th>
+     <td>Male</td>
+     <th>Patient Id</th>
+     <td>122451</td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>Medical Problems History</h2>
+  <table class="table table-bordered">
+   <thead>
+    <tr><B>
+     <th>Date of Diagnosis</th>
+     <th>Problem</th>
+     <th>Condition</th>
+     <th>Attending Physician</th>
+     </B>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>2023-09-15</td>
+     <td>Hypertension</td>
+     <td>Stable</td>
+     <td>Dr. Michael Anderson</td>
+    </tr>
+    <tr>
+     <td>2022-05-10</td>
+     <td>Migraine</td>
+     <td>Recurrent episodes</td>
+     <td>Dr. Lisa Martinez</td>
+    </tr>
+    <tr>
+     <td>2021-08-22</td>
+     <td>Type 2 Diabetes</td>
+     <td>Managing well</td>
+     <td>Dr. Michael Anderson</td>
+    </tr>
+    <!-- Add more rows as needed -->
+   </tbody>
+  </table>
+  <h2>Upload New Medical Problem Record</h2>
+  <form>
+   <div class="form-group">
+    <label for="date">Date:</label>
+    <input type="date" class="form-control" id="date" required>
+   </div>
+   <div class="form-group">
+    <label for="event">Problem</label>
+    <input type="text" class="form-control" id="event" required>
+   </div>
+   <div class="form-group">
+    <label for="prescription">Condition:</label>
+    <textarea class="form-control" id="prescription" rows="2"></textarea>
+   </div>
+   <div class="form-group">
+    <label for="remedies">Attending Physician:</label>
+    <textarea class="form-control" id="remedies" rows="2"></textarea>
+   </div>
+   <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+ </div>
+
+ <!-- Link to Bootstrap JS and jQuery -->
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
